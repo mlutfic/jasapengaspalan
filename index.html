@@ -429,15 +429,7 @@
     <h1>Galeri Proyek</h1>
     <p>Pekerjaan nyata, hasil yang bisa dilihat. Sebagian dokumentasi proyek pengaspalan kami di area Jabodetabek.</p>
   </div></section>
-  <section class="block"><div class="wrap"><div class="gallery">
-    <div class="gitem reveal"><div class="img" style="background-image:url('img/g1.jpg');background-size:cover;background-position:center"></div><span class="tag">Hotmix</span><div class="cap">Hotmix · Kawasan Industri Cikarang</div></div>
-    <div class="gitem reveal" style="--d:.05s"><div class="img" style="background-image:url('img/g2.jpg');background-size:cover;background-position:center"></div><span class="tag">Overlay</span><div class="cap">Overlay · Perumahan Bekasi</div></div>
-    <div class="gitem reveal" style="--d:.1s"><div class="img" style="background-image:url('img/g3.jpg');background-size:cover;background-position:center"></div><span class="tag">Marka</span><div class="cap">Pengaspalan Area Gudang</div></div>
-    <div class="gitem reveal" style="--d:.15s"><div class="img" style="background-image:url('img/g4.jpg');background-size:cover;background-position:center"></div><span class="tag">Patching</span><div class="cap">Akses Jalan · Komplek</div></div>
-    <div class="gitem reveal" style="--d:.2s"><div class="img" style="background-image:url('img/g5.jpg');background-size:cover;background-position:center"></div><span class="tag">Finishing</span><div class="cap">Jalan Akses · Finishing Rapi</div></div>
-    <div class="gitem reveal" style="--d:.25s"><div class="img" style="background-image:url('img/g6.jpg');background-size:cover;background-position:center"></div><span class="tag">Akses</span><div class="cap">Akses Pabrik · Jakarta</div></div>
-    <div class="gitem reveal" style="--d:.3s"><div class="img" style="background-image:url('img/g7.jpg');background-size:cover;background-position:center"></div><span class="tag">Drainase</span><div class="cap">Patching Hotmix · Pancoran Mas</div></div>
-  </div></div></section>
+  <section class="block"><div class="wrap"><div class="gallery" id="projectGallery"></div></div></section>
   <div class="cta-band"><div class="wrap"><h2>Proyek Anda berikutnya?</h2><p>Diskusikan kebutuhan pengaspalan Anda — kami beri estimasi setelah survey lokasi.</p><div class="btns"><a class="btn btn-primary" data-page="penawaran">Diskusikan Proyek</a><a class="btn btn-ghost" data-page="testimoni">Baca Testimoni</a></div></div></div>
 </div>
 
@@ -574,6 +566,16 @@
   addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10));
   const menu = document.getElementById('mobileMenu');
   document.getElementById('ham').addEventListener('click', () => menu.classList.toggle('show'));
+  const gallery = document.getElementById('projectGallery');
+  const galleryTotal = 91;
+  if(gallery){
+    gallery.innerHTML = Array.from({length:galleryTotal}, (_, i) => {
+      const n = i + 1;
+      const file = `img/gallery/project-${String(n).padStart(2,'0')}.jpeg`;
+      const delay = ((i % 8) * .04).toFixed(2);
+      return `<div class="gitem reveal" style="--d:${delay}s"><div class="img" style="background-image:url('${file}');background-size:cover;background-position:center"></div><span class="tag">Proyek</span><div class="cap">Dokumentasi Proyek ${String(n).padStart(2,'0')}</div></div>`;
+    }).join('');
+  }
 
   function showPage(id, push){
     if(!PAGES.includes(id)) id='home';

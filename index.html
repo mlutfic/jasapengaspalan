@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#a22836" />
+<title>Dimas Aspal — Layanan Pengaspalan Profesional Jabodetabek</title>
+<meta property="og:title" content="Dimas Aspal — Layanan Pengaspalan Profesional Jabodetabek" />
+<meta property="og:description" content="Spesialis jasa pengaspalan hotmix, overlay, dan perbaikan jalan di Jabodetabek. Survey gratis, hasil rapi, garansi kerja." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="img/g1.jpg" />
+<meta name="robots" content="index,follow" />
+
+<meta name="description" content="Dimas Aspal — Spesialis jasa pengaspalan hotmix untuk perumahan, proyek konstruksi, dan kawasan industri di Jabodetabek. Survey gratis, hasil rapi, garansi kerja." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f3ef;--bg-2:#ece7e1;--surface:#ffffff;--surface-2:#faf7f3;
+    --line:rgba(23,17,15,.10);--line-strong:rgba(23,17,15,.18);
+    --text:#17110f;--ink:#17110f;--muted:#6d6660;--muted-2:#9b948e;
+    --maroon:#a22836;--maroon-dk:#7c1c28;--maroon-darker:#561019;--maroon-lt:#d24a5b;
+    --cream:#f7f2ec;--dark:#1b1411;
+    --maxw:1200px;--r:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  h1,h2,h3{line-height:1.05}
+  .display{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.5px}
+  .eyebrow{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:3px;font-weight:600;font-size:14px;color:var(--maroon);display:inline-flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--maroon)}
+  .amber{color:var(--maroon)} .muted{color:var(--muted)}
+  .hazard{height:6px;background:repeating-linear-gradient(135deg,var(--maroon) 0 22px,var(--ink) 22px 44px)}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;padding:13px 22px;border-radius:10px;cursor:pointer;border:none;transition:transform .18s,box-shadow .18s,background .18s,color .18s,border-color .18s;white-space:nowrap}
+  .btn-primary{background:var(--maroon);color:#fff;box-shadow:0 8px 22px rgba(162,40,54,.28)}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--maroon-dk);box-shadow:0 12px 28px rgba(162,40,54,.34)}
+  .btn-ghost{background:#fff;color:var(--text);border:1px solid var(--line-strong)}
+  .btn-ghost:hover{border-color:var(--maroon);color:var(--maroon)}
+  .btn svg{width:18px;height:18px}
+
+  /* top bar */
+  .topbar{background:var(--dark);color:#b9b2aa;font-size:13px}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:9px 24px;flex-wrap:wrap}
+  .topbar strong{color:var(--cream)}
+  .topbar .dot{width:7px;height:7px;border-radius:50%;background:var(--maroon-lt);display:inline-block;margin-right:8px;box-shadow:0 0 0 3px rgba(210,74,91,.22)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:60;background:rgba(246,243,239,.86);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .25s,background .25s,box-shadow .25s}
+  header.scrolled{border-color:var(--line);background:rgba(246,243,239,.96);box-shadow:0 6px 24px rgba(23,17,15,.06)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px 0}
+  .logo{display:flex;align-items:center;cursor:pointer}
+  .logo img{height:42px;width:auto}
+  .nav-links{display:flex;gap:24px;font-size:15px;font-weight:600}
+  .nav-links a{color:var(--muted);transition:color .15s;position:relative;padding:4px 0;cursor:pointer}
+  .nav-links a:hover{color:var(--text)}
+  .nav-links a.active{color:var(--maroon)}
+  .nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--maroon)}
+  .nav-cta{display:flex;gap:12px;align-items:center}
+  .hamburger{display:none;background:none;border:1px solid var(--line-strong);border-radius:9px;width:44px;height:44px;cursor:pointer}
+  .hamburger span{display:block;width:20px;height:2px;background:var(--text);margin:4px auto;transition:.25s}
+  .mobile-menu{display:none;flex-direction:column;padding:8px 24px 22px;background:var(--surface);border-bottom:1px solid var(--line)}
+  .mobile-menu a{padding:13px 0;color:var(--text);font-weight:600;border-bottom:1px solid var(--line);cursor:pointer}
+  .mobile-menu a.active{color:var(--maroon)}
+  .mobile-menu .btn{margin-top:16px;justify-content:center}
+  .mobile-menu.show{display:flex}
+
+  /* PAGE SYSTEM */
+  .page{display:none}
+  .page.active{display:block}
+  @keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  .page.active .reveal{animation:up .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
+
+  /* PAGE HEADER */
+  .phead{position:relative;overflow:hidden;padding:64px 0 60px;border-bottom:1px solid var(--line);background:var(--surface)}
+  .phead::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 360px at 80% 0%,rgba(162,40,54,.10),transparent 60%)}
+  .phead::after{content:"";position:absolute;inset:0;opacity:.6;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(700px 400px at 70% 20%,#000,transparent 75%)}
+  .phead .wrap{position:relative;z-index:1}
+  .crumb{font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:2px;font-size:13px;color:var(--muted-2);margin-bottom:14px}
+  .crumb b{color:var(--maroon)}
+  .phead h1{font-family:'Anton';font-size:clamp(38px,6vw,68px);margin-bottom:16px;letter-spacing:.5px}
+  .phead p{color:#4c4641;font-size:18px;max-width:620px}
+
+  section.block{padding:80px 0}
+  .sec-head{max-width:680px;margin-bottom:46px}
+  .sec-head h2{font-family:'Anton';font-size:clamp(28px,4.2vw,44px);margin:16px 0 14px;letter-spacing:.5px}
+  .sec-head p{color:var(--muted);font-size:17px}
+
+  /* HERO */
+  .hero{position:relative;padding:70px 0 80px;overflow:hidden;background:var(--surface)}
+  .hero::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(720px 420px at 80% 6%,rgba(162,40,54,.12),transparent 60%),radial-gradient(600px 500px at 0% 100%,rgba(162,40,54,.05),transparent 55%)}
+  .hero::after{content:"";position:absolute;inset:0;z-index:0;opacity:.55;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(900px 600px at 60% 30%,#000,transparent 75%)}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+  .hero h1{font-family:'Anton';font-size:clamp(40px,6.4vw,78px);margin:18px 0 20px;letter-spacing:.5px}
+  .hero h1 .hl{color:var(--maroon)}
+  .hero p.lead{font-size:18px;color:#4c4641;max-width:540px}
+  .hero p.lead b{color:var(--text)}
+  .pills{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 30px}
+  .pill{font-size:13.5px;font-weight:600;padding:8px 14px;border:1px solid var(--line-strong);border-radius:30px;color:#4c4641;background:#fff}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:30px;margin-top:38px;flex-wrap:wrap}
+  .hero-stats .s b{font-family:'Anton';font-size:30px;display:block;color:var(--text);letter-spacing:.5px}
+  .hero-stats .s span{font-size:13px;color:var(--muted)}
+  .hero-stats .s .star{color:var(--maroon)}
+  .hero-card{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.07);background:var(--dark);box-shadow:0 30px 70px rgba(23,17,15,.28)}
+  .hero-card .photo{height:230px;position:relative;background:repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 2px,transparent 2px 60px),linear-gradient(160deg,#2a2320,#161210)}
+  .road{position:absolute;inset:0}
+  .badge-survey{position:absolute;top:16px;left:16px;z-index:3;background:var(--maroon);color:#fff;font-family:'Barlow Condensed';font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px;padding:7px 13px;border-radius:8px;box-shadow:0 6px 18px rgba(162,40,54,.4)}
+  .hero-card .label{position:absolute;bottom:14px;left:16px;z-index:3;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:2px;font-size:13px;color:var(--maroon-lt)}
+  .hero-card .body{padding:20px;color:var(--cream)}
+  .hero-card .body .row{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+  .hero-card h4{font-family:'Anton';font-size:20px;font-weight:400}
+  .hero-card .area{color:#b3aca5;font-size:14px;margin-top:2px}
+  .hero-card .m2{font-family:'Anton';font-size:26px;color:var(--maroon-lt);line-height:1;text-align:right}
+  .hero-card .m2 small{display:block;font-family:'Manrope';font-size:11px;color:#b3aca5;letter-spacing:1px;text-transform:uppercase}
+  .testi-mini{margin-top:18px;border-top:1px solid rgba(255,255,255,.1);padding-top:16px;display:flex;gap:12px;align-items:center}
+  .ava{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--maroon),var(--maroon-dk));color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px;flex:none}
+  .testi-mini .txt{font-size:13.5px;color:#cfc9c2}
+  .testi-mini .txt b{display:block;color:var(--cream);font-size:13px}
+  .stars{color:var(--maroon);font-size:13px;letter-spacing:1px}
+  .hero-card .stars{color:var(--maroon-lt)}
+
+  /* marquee */
+  .marquee{background:var(--maroon);color:var(--cream);overflow:hidden;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+  .marquee .track{display:flex;white-space:nowrap;animation:scroll 26s linear infinite;font-family:'Anton';font-size:18px;letter-spacing:1.5px;padding:12px 0}
+  .marquee .track span{padding:0 20px}
+  .marquee .track em{color:rgba(255,255,255,.5);font-style:normal}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* stat band */
+  .statband{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .statband .grid{display:grid;grid-template-columns:repeat(4,1fr)}
+  .statband .cell{padding:44px 24px;text-align:center;border-right:1px solid var(--line)}
+  .statband .cell:last-child{border-right:none}
+  .statband b{font-family:'Anton';font-size:clamp(34px,5vw,52px);color:var(--maroon);display:block;letter-spacing:.5px}
+  .statband span{color:var(--muted);font-size:14px;font-weight:600;letter-spacing:.5px}
+
+  /* services */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:transform .2s,border-color .2s,box-shadow .2s;position:relative;overflow:hidden;box-shadow:0 1px 0 rgba(23,17,15,.02)}
+  .card:hover{transform:translateY(-5px);border-color:rgba(162,40,54,.4);box-shadow:0 18px 40px rgba(23,17,15,.10)}
+  .card .ic{width:52px;height:52px;border-radius:12px;background:rgba(162,40,54,.10);color:var(--maroon);display:grid;place-items:center;margin-bottom:18px;border:1px solid rgba(162,40,54,.22)}
+  .card .ic svg{width:26px;height:26px}
+  .card h3{font-size:21px;font-weight:800;margin-bottom:10px}
+  .card>p{color:var(--muted);font-size:15px;margin-bottom:16px}
+  .card ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .card li{font-size:14px;color:#4c4641;display:flex;gap:9px;align-items:flex-start}
+  .card li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--maroon);margin-top:7px;flex:none}
+
+  /* timeline */
+  .timeline{position:relative;max-width:880px;margin:0 auto;padding-left:8px}
+  .timeline::before{content:"";position:absolute;left:31px;top:10px;bottom:10px;width:2px;background:repeating-linear-gradient(var(--maroon) 0 8px,transparent 8px 16px)}
+  .tl{position:relative;display:flex;gap:26px;padding:18px 0 34px}
+  .tl .dot{width:64px;height:64px;flex:none;border-radius:14px;background:#fff;border:1px solid var(--line-strong);display:grid;place-items:center;font-family:'Anton';font-size:26px;color:var(--maroon);z-index:1;box-shadow:0 6px 18px rgba(23,17,15,.06)}
+  .tl .c{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;flex:1}
+  .tl .c h3{font-size:20px;font-weight:800;margin-bottom:8px}
+  .tl .c p{color:var(--muted);font-size:15px}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:16px}
+  .gitem{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);cursor:pointer;box-shadow:0 6px 20px rgba(23,17,15,.08)}
+  .gitem .img{position:absolute;inset:0}
+  .gitem:nth-child(1){grid-column:span 2;grid-row:span 2}
+  .gitem:nth-child(6){grid-column:span 2}
+  .gitem .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:16px;font-weight:700;font-size:14px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.85));transform:translateY(8px);opacity:.9;transition:.25s}
+  .gitem:hover .cap{transform:translateY(0);opacity:1}
+  .gitem .tag{position:absolute;top:12px;left:12px;z-index:2;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:1.5px;font-size:11px;background:var(--maroon);color:#fff;padding:4px 9px;border-radius:6px;font-weight:700}
+  .gitem .img::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(162,40,54,.12),rgba(0,0,0,.25))}
+
+  /* why */
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .feat{display:flex;flex-direction:column;gap:22px}
+  .feat .f{display:flex;gap:16px}
+  .feat .f .fic{width:46px;height:46px;border-radius:11px;flex:none;background:var(--maroon);color:#fff;display:grid;place-items:center}
+  .feat .f .fic svg{width:23px;height:23px}
+  .feat .f h3{font-size:18px;font-weight:800;margin-bottom:5px}
+  .feat .f p{color:var(--muted);font-size:14.5px}
+  .team-photo{position:relative;border-radius:20px;overflow:hidden;min-height:440px;border:1px solid rgba(255,255,255,.06);background:repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 3px,transparent 3px 90px),linear-gradient(150deg,#2a2017,#171210 70%);box-shadow:0 24px 60px rgba(23,17,15,.18)}
+  .team-photo .tag{position:absolute;top:20px;left:20px;font-family:'Barlow Condensed';letter-spacing:2px;font-size:13px;background:var(--maroon);color:#fff;padding:6px 12px;border-radius:7px;font-weight:700}
+  .team-photo .cap{position:absolute;left:24px;bottom:24px;right:24px}
+  .team-photo .cap .eyebrow{color:var(--maroon-lt)}
+  .team-photo .cap .eyebrow::before{background:var(--maroon-lt)}
+  .team-photo .cap h3{font-family:'Anton';font-size:30px;color:#fff;margin-top:8px}
+
+  /* testimonials */
+  .testi{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .tcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;position:relative;box-shadow:0 6px 20px rgba(23,17,15,.05)}
+  .tcard .q{font-family:'Anton';font-size:56px;color:rgba(162,40,54,.22);line-height:.5;height:24px}
+  .tcard p{font-size:15px;color:#4c4641;margin:16px 0 20px}
+  .tcard .who{display:flex;gap:12px;align-items:center;border-top:1px solid var(--line);padding-top:18px}
+  .tcard .who b{display:block;font-size:15px}
+  .tcard .who span{font-size:13px;color:var(--muted)}
+  .ratingbox{display:flex;gap:28px;align-items:center;justify-content:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px;margin-bottom:42px;flex-wrap:wrap;box-shadow:0 8px 24px rgba(23,17,15,.05)}
+  .ratingbox .big{font-family:'Anton';font-size:64px;color:var(--maroon);line-height:.9}
+  .ratingbox .meta{font-size:15px;color:var(--muted)}
+
+  /* form */
+  .form-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:start}
+  .form-info ul{list-style:none;display:flex;flex-direction:column;gap:13px;margin:24px 0 28px}
+  .form-info li{display:flex;gap:11px;font-size:15px;color:#4c4641}
+  .form-info li svg{width:21px;height:21px;color:var(--maroon);flex:none;margin-top:2px}
+  .form-info .phone{font-family:'Anton';font-size:24px;color:var(--maroon);margin-top:6px}
+  .formbox{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:0 14px 40px rgba(23,17,15,.08)}
+  .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+  .field.full{grid-column:1/-1}
+  .field label{font-size:13px;font-weight:700;color:#3f3935;letter-spacing:.3px}
+  .field input,.field select,.field textarea{background:var(--surface-2);border:1px solid var(--line-strong);border-radius:10px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:15px;outline:none;transition:border-color .15s}
+  .field input::placeholder,.field textarea::placeholder{color:var(--muted-2)}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--maroon)}
+  .field textarea{resize:vertical;min-height:84px}
+  .field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a22836' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px}
+  .formbox .btn{width:100%;justify-content:center;margin-top:6px;font-size:16px;padding:15px}
+  .formnote{text-align:center;font-size:12.5px;color:var(--muted-2);margin-top:12px}
+
+  /* faq */
+  .faq{max-width:840px;margin:0 auto}
+  .qa{border-bottom:1px solid var(--line)}
+  .qa button{width:100%;background:none;border:none;color:var(--text);text-align:left;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:18px;font-weight:700;font-family:inherit}
+  .qa .ico{width:30px;height:30px;border-radius:8px;border:1px solid var(--line-strong);display:grid;place-items:center;flex:none;transition:.25s;color:var(--maroon);font-size:20px;line-height:1}
+  .qa.open .ico{background:var(--maroon);color:#fff;transform:rotate(45deg)}
+  .qa .ans{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--muted)}
+  .qa .ans p{padding:0 0 22px;font-size:15.5px;max-width:760px}
+
+  /* CTA band (dark maroon) */
+  .cta-band{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--maroon-dk),var(--maroon-darker))}
+  .cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 50% 0%,rgba(255,255,255,.10),transparent 60%)}
+  .cta-band .wrap{position:relative;z-index:1;text-align:center;padding:72px 24px}
+  .cta-band h2{font-family:'Anton';font-size:clamp(28px,4vw,42px);margin-bottom:14px;letter-spacing:.5px;color:#fff}
+  .cta-band p{color:rgba(255,255,255,.82);font-size:17px;max-width:560px;margin:0 auto 26px}
+  .cta-band .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta-band .btn-primary{background:#fff;color:var(--maroon);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+  .cta-band .btn-primary:hover{background:var(--cream);color:var(--maroon-dk)}
+  .cta-band .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+  .cta-band .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff;color:#fff}
+
+  /* footer */
+  footer{background:var(--dark);border-top:1px solid var(--line);padding:64px 0 0}
+  footer .logo img{height:46px}
+  .fgrid2{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:40px}
+  footer .desc{color:#b3aca5;font-size:14.5px;margin:18px 0 20px;max-width:330px}
+  footer h5{font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:2px;font-size:14px;color:var(--maroon-lt);margin-bottom:18px}
+  footer ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+  footer ul a{color:#b3aca5;font-size:14.5px;transition:color .15s;cursor:pointer}
+  footer ul a:hover{color:var(--cream)}
+  footer .btn-primary{background:var(--cream);color:var(--maroon)}
+  footer .btn-primary:hover{background:#fff;color:var(--maroon-dk)}
+  .fbottom{border-top:1px solid rgba(255,255,255,.08);margin-top:54px;padding:22px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:rgba(255,255,255,.4)}
+
+  @media(max-width:980px){
+    .hero .wrap{grid-template-columns:1fr;gap:40px}
+    .why-grid{grid-template-columns:1fr;gap:36px}
+    .form-wrap{grid-template-columns:1fr;gap:32px}
+    .cards,.testi{grid-template-columns:1fr 1fr}
+    .statband .grid{grid-template-columns:1fr 1fr}
+    .statband .cell:nth-child(2){border-right:none}
+    .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
+    .gitem:nth-child(1){grid-column:span 2;grid-row:span 1}
+    .gitem:nth-child(6){grid-column:span 2}
+  }
+  @media(max-width:680px){
+    .nav-links,.nav-cta .btn-ghost{display:none}
+    .hamburger{display:block}
+    .cards,.testi,.fgrid2,.fgrid{grid-template-columns:1fr}
+    section.block{padding:56px 0}
+    .hero{padding:44px 0 56px}
+    .phead{padding:48px 0 44px}
+    .topbar .wrap{justify-content:center;text-align:center}
+    .tl .dot{width:52px;height:52px;font-size:21px}
+    .timeline::before{left:25px}
+    .logo img{height:36px}
+  }
+
+  .hero-card .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.32),transparent 34%,transparent 52%,rgba(0,0,0,.62));z-index:1}
+  .hero-card .badge-survey,.hero-card .label{z-index:3}
+  .team-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,15,.18),rgba(20,16,15,.32) 50%,rgba(20,16,15,.85));z-index:1}
+  .team-photo .tag,.team-photo .cap{z-index:2}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div><span class="dot"></span>Buka untuk survey &amp; pemesanan — Senin–Sabtu, 08.00–17.00</div>
+    <div>Hubungi: <strong>0812-XXXX-XXXX</strong> · Area: Jabodetabek</div>
+  </div>
+</div>
+
+<header id="header">
+  <div class="wrap">
+    <nav class="nav">
+      <div class="logo" data-page="home"><img src="img/logo.png" alt="Dimas Aspal — Layanan Pengaspalan Jabodetabek"></div>
+      <div class="nav-links">
+        <a data-page="layanan">Layanan</a>
+        <a data-page="proses">Proses Kerja</a>
+        <a data-page="galeri">Galeri Proyek</a>
+        <a data-page="mengapa">Mengapa Kami</a>
+        <a data-page="testimoni">Testimoni</a>
+        <a data-page="faq">FAQ</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" data-page="penawaran">Minta Penawaran</a>
+        <a class="btn btn-primary" id="navWa">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.728-.978z"/></svg>WhatsApp</a>
+      </div>
+      <button class="hamburger" id="ham"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a data-page="home">Beranda</a>
+    <a data-page="layanan">Layanan</a>
+    <a data-page="proses">Proses Kerja</a>
+    <a data-page="galeri">Galeri Proyek</a>
+    <a data-page="mengapa">Mengapa Kami</a>
+    <a data-page="testimoni">Testimoni</a>
+    <a data-page="faq">FAQ</a>
+    <a class="btn btn-primary" data-page="penawaran">Minta Penawaran</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HOME -->
+<div class="page" id="page-home">
+  <section class="hero">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">Spesialis Pengaspalan · Jabodetabek</span>
+        <h1>Jalan Mulus,<br><span class="hl">Proyek Selesai</span><br>Tepat Waktu.</h1>
+        <p class="lead">Dimas Aspal mengerjakan <b>pengaspalan hotmix, overlay, dan perbaikan jalan</b> untuk perumahan, kawasan industri, dan proyek konstruksi. Survey lokasi gratis, hasil rapi, dengan tim &amp; alat berat siap turun lapangan.</p>
+        <div class="pills"><span class="pill">Hotmix / Coldmix</span><span class="pill">Overlay &amp; Patching</span><span class="pill">Marka Jalan</span><span class="pill">Drainase Pendukung</span></div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" data-page="penawaran"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>Chat WhatsApp Sekarang</a>
+          <a class="btn btn-ghost" data-page="penawaran">Minta Penawaran Online</a>
+        </div>
+        <div class="hero-stats">
+          <div class="s"><b>150+</b><span>proyek selesai</span></div>
+          <div class="s"><b>12 thn</b><span>pengalaman</span></div>
+          <div class="s"><b><span class="star">★</span> 4.9</b><span>rating klien</span></div>
+        </div>
+      </div>
+      <div class="hero-card reveal" style="--d:.12s">
+        <div class="photo" style="background-image:url('img/hero.jpg');background-size:cover;background-position:center">
+          <span class="badge-survey">Survey Gratis</span>
+          
+          <span class="label">Pekerjaan Terbaru</span>
+        </div>
+        <div class="body">
+          <div class="row">
+            <div><h4>Hotmix Area Industri</h4><div class="area">Hotmix · Kawasan Industri Cikarang</div></div>
+            <div class="m2">3.500<small>m² selesai</small></div>
+          </div>
+          <div class="testi-mini"><div class="ava">HW</div><div class="txt"><span class="stars">★★★★★</span> “Pengerjaannya cepat &amp; rapi.”<b>Pak Hendra · Cikarang</b></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee"><div class="track">
+    <span>HOTMIX <em>★</em> COLDMIX <em>★</em> OVERLAY <em>★</em> PATCHING <em>★</em> MARKA JALAN <em>★</em> PAVING &amp; DRAINASE <em>★</em> JABODETABEK <em>★</em></span>
+    <span>HOTMIX <em>★</em> COLDMIX <em>★</em> OVERLAY <em>★</em> PATCHING <em>★</em> MARKA JALAN <em>★</em> PAVING &amp; DRAINASE <em>★</em> JABODETABEK <em>★</em></span>
+  </div></div>
+
+  <div class="statband"><div class="grid">
+    <div class="cell reveal"><b>150+</b><span>Proyek Terselesaikan</span></div>
+    <div class="cell reveal" style="--d:.08s"><b>12</b><span>Tahun Pengalaman</span></div>
+    <div class="cell reveal" style="--d:.16s"><b>25K m²</b><span>Total Area Diaspal</span></div>
+    <div class="cell reveal" style="--d:.24s"><b>100%</b><span>Garansi Pengerjaan</span></div>
+  </div></div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head reveal" style="margin:0 auto 0;text-align:center">
+        <span class="eyebrow" style="justify-content:center">Kenapa Dimas Aspal</span>
+        <h2>Satu tim, dari survey sampai jalan jadi.</h2>
+        <p style="margin:0 auto">Jelajahi tiap halaman untuk lihat layanan, proses kerja, galeri proyek nyata, dan testimoni klien kami.</p>
+        <div class="hero-cta" style="justify-content:center;margin-top:26px">
+          <a class="btn btn-primary" data-page="layanan">Lihat Layanan</a>
+          <a class="btn btn-ghost" data-page="galeri">Galeri Proyek</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- LAYANAN -->
+<div class="page" id="page-layanan">
+  <section class="phead"><div class="wrap reveal">
+    <div class="crumb">Beranda <b>/</b> Layanan</div>
+    <h1>Layanan Pengaspalan</h1>
+    <p>Pengerjaan aspal untuk setiap skala proyek — dari perbaikan jalan komplek perumahan, area parkir gudang, sampai jalan kawasan industri. Tim, alat berat, dan material berkualitas dengan standar pengerjaan rapi.</p>
+  </div></section>
+  <section class="block"><div class="wrap"><div class="cards">
+    <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18h18M5 18l2-12h10l2 12M9 6v12M15 6v12"/></svg></div><h3>Aspal Hotmix</h3><p>Aspal panas standar Bina Marga untuk hasil padat, tahan beban berat &amp; cuaca ekstrem.</p><ul><li>AC-WC, AC-BC, AC-Base</li><li>Cocok untuk jalan utama &amp; kawasan</li><li>Pemadatan 2 lapis dengan tandem roller</li></ul></div>
+    <div class="card reveal" style="--d:.07s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6m0 0l3-3m-3 3L9 5M4 14a8 8 0 0016 0M4 18h16"/></svg></div><h3>Aspal Coldmix</h3><p>Solusi cepat untuk perbaikan jalan tanpa pemanasan — ideal untuk area sulit dijangkau.</p><ul><li>Cepat kering &amp; langsung dilewati</li><li>Pengerjaan minim alat berat</li><li>Cocok untuk perumahan padat</li></ul></div>
+    <div class="card reveal" style="--d:.14s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 7h18M3 17h18"/></svg></div><h3>Overlay / Pelapisan</h3><p>Penambahan lapisan aspal baru di atas jalan lama agar permukaan kembali mulus &amp; kuat.</p><ul><li>Tanpa bongkar total</li><li>Tambah usia pakai jalan</li><li>Hemat biaya vs aspal baru</li></ul></div>
+    <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l4-9 4 4 3-7 5 12z"/></svg></div><h3>Patching / Tambal Lubang</h3><p>Perbaikan lubang &amp; retak pada jalan rusak dengan finishing rata permukaan eksisting.</p><ul><li>Pengerjaan cepat 1 hari</li><li>Material hotmix / coldmix</li><li>Garansi pengerjaan</li></ul></div>
+    <div class="card reveal" style="--d:.07s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M12 3l4 4M12 3L8 7"/><rect x="4" y="14" width="16" height="6" rx="1"/></svg></div><h3>Marka Jalan &amp; Cat</h3><p>Pengecatan marka, garis lajur, simbol lalu lintas, &amp; area parkir dengan cat thermoplastic.</p><ul><li>Cat refleksi malam hari</li><li>Tahan lama &amp; jelas terlihat</li><li>Standar K3 area kerja</li></ul></div>
+    <div class="card reveal" style="--d:.14s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="7" height="7"/><rect x="14" y="4" width="7" height="7"/><rect x="3" y="14" width="7" height="6"/><rect x="14" y="14" width="7" height="6"/></svg></div><h3>Paving &amp; Drainase</h3><p>Pekerjaan pendukung: paving block area pejalan kaki, saluran air, dan kanstin pembatas.</p><ul><li>Saluran U-ditch / U-gutter</li><li>Paving cacing &amp; hexagon</li><li>Kanstin trotoar</li></ul></div>
+  </div></div></section>
+  <div class="cta-band"><div class="wrap"><h2>Butuh layanan yang mana?</h2><p>Ceritakan kebutuhan proyek Anda, tim kami bantu rekomendasikan jenis pengerjaan paling sesuai.</p><div class="btns"><a class="btn btn-primary" data-page="penawaran">Minta Penawaran</a><a class="btn btn-ghost" data-page="proses">Lihat Proses Kerja</a></div></div></div>
+</div>
+
+<!-- PROSES -->
+<div class="page" id="page-proses">
+  <section class="phead"><div class="wrap reveal">
+    <div class="crumb">Beranda <b>/</b> Proses Kerja</div>
+    <h1>Empat Langkah Kerja</h1>
+    <p>Setiap proyek kami kerjakan dengan alur transparan agar klien tahu progres &amp; biaya sejak awal — dari survey ke jalan jadi.</p>
+  </div></section>
+  <section class="block"><div class="wrap"><div class="timeline">
+    <div class="tl reveal"><div class="dot">01</div><div class="c"><h3>Konsultasi &amp; Survey</h3><p>Tim turun ke lokasi untuk ukur luas, cek kondisi tanah, dan diskusi kebutuhan. Survey gratis untuk area Jabodetabek.</p></div></div>
+    <div class="tl reveal" style="--d:.08s"><div class="dot">02</div><div class="c"><h3>Penawaran Detail</h3><p>RAB jelas: material, ketebalan aspal, volume, alat, dan jadwal pengerjaan. Tanpa biaya kejutan.</p></div></div>
+    <div class="tl reveal" style="--d:.16s"><div class="dot">03</div><div class="c"><h3>Eksekusi Lapangan</h3><p>Persiapan lahan, primer coat, penghamparan aspal, dan pemadatan dua lapis dengan tandem roller.</p></div></div>
+    <div class="tl reveal" style="--d:.24s"><div class="dot">04</div><div class="c"><h3>Finishing &amp; Garansi</h3><p>Pembersihan area, marka jalan jika diminta, dan garansi pengerjaan tertulis pada kontrak kerja.</p></div></div>
+  </div></div></section>
+  <div class="cta-band"><div class="wrap"><h2>Mulai dari langkah pertama.</h2><p>Jadwalkan survey lokasi gratis hari ini — tim kami siap turun lapangan.</p><div class="btns"><a class="btn btn-primary" data-page="penawaran">Jadwalkan Survey</a><a class="btn btn-ghost" data-page="galeri">Lihat Hasil Kerja</a></div></div></div>
+</div>
+
+<!-- GALERI -->
+<div class="page" id="page-galeri">
+  <section class="phead"><div class="wrap reveal">
+    <div class="crumb">Beranda <b>/</b> Galeri Proyek</div>
+    <h1>Galeri Proyek</h1>
+    <p>Pekerjaan nyata, hasil yang bisa dilihat. Sebagian dokumentasi proyek pengaspalan kami di area Jabodetabek.</p>
+  </div></section>
+  <section class="block"><div class="wrap"><div class="gallery">
+    <div class="gitem reveal"><div class="img" style="background-image:url('img/g1.jpg');background-size:cover;background-position:center"></div><span class="tag">Hotmix</span><div class="cap">Hotmix · Kawasan Industri Cikarang</div></div>
+    <div class="gitem reveal" style="--d:.05s"><div class="img" style="background-image:url('img/g2.jpg');background-size:cover;background-position:center"></div><span class="tag">Overlay</span><div class="cap">Overlay · Perumahan Bekasi</div></div>
+    <div class="gitem reveal" style="--d:.1s"><div class="img" style="background-image:url('img/g3.jpg');background-size:cover;background-position:center"></div><span class="tag">Marka</span><div class="cap">Pengaspalan Area Gudang</div></div>
+    <div class="gitem reveal" style="--d:.15s"><div class="img" style="background-image:url('img/g4.jpg');background-size:cover;background-position:center"></div><span class="tag">Patching</span><div class="cap">Akses Jalan · Komplek</div></div>
+    <div class="gitem reveal" style="--d:.2s"><div class="img" style="background-image:url('img/g5.jpg');background-size:cover;background-position:center"></div><span class="tag">Finishing</span><div class="cap">Jalan Akses · Finishing Rapi</div></div>
+    <div class="gitem reveal" style="--d:.25s"><div class="img" style="background-image:url('img/g6.jpg');background-size:cover;background-position:center"></div><span class="tag">Akses</span><div class="cap">Akses Pabrik · Jakarta</div></div>
+    <div class="gitem reveal" style="--d:.3s"><div class="img" style="background-image:url('img/g7.jpg');background-size:cover;background-position:center"></div><span class="tag">Drainase</span><div class="cap">Patching Hotmix · Pancoran Mas</div></div>
+  </div></div></section>
+  <div class="cta-band"><div class="wrap"><h2>Proyek Anda berikutnya?</h2><p>Diskusikan kebutuhan pengaspalan Anda — kami beri estimasi setelah survey lokasi.</p><div class="btns"><a class="btn btn-primary" data-page="penawaran">Diskusikan Proyek</a><a class="btn btn-ghost" data-page="testimoni">Baca Testimoni</a></div></div></div>
+</div>
+
+<!-- MENGAPA -->
+<div class="page" id="page-mengapa">
+  <section class="phead"><div class="wrap reveal">
+    <div class="crumb">Beranda <b>/</b> Mengapa Kami</div>
+    <h1>Mengapa Dimas Aspal</h1>
+    <p>Dipercaya developer perumahan &amp; manajemen kawasan. Kami bukan calo — tim lapangan, alat berat, dan supply hotmix dikoordinasi langsung sehingga harga efisien dan jadwal terkendali.</p>
+  </div></section>
+  <section class="block"><div class="wrap why-grid">
+    <div class="reveal"><div class="feat">
+      <div class="f"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M12 3l7 3v6c0 5-3 7-7 9-4-2-7-4-7-9V6z"/></svg></div><div><h3>Garansi Pengerjaan</h3><p>Garansi tertulis atas hasil aspal sesuai spesifikasi yang disepakati.</p></div></div>
+      <div class="f"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><h3>Tepat Waktu</h3><p>Jadwal proyek terukur. Cocok untuk pengaspalan yang harus selesai sebelum operasional dimulai.</p></div></div>
+      <div class="f"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 7h6M9 11h6M9 15h4M5 3h14v18l-3-2-2 2-2-2-2 2-2-2-3 2z"/></svg></div><div><h3>RAB Transparan</h3><p>Penawaran rinci per item: volume, ketebalan aspal, alat, dan tenaga kerja. Tanpa biaya kejutan.</p></div></div>
+      <div class="f"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><div><h3>Material Berkualitas</h3><p>Hotmix dari AMP berstandar, agregat bersih, kadar aspal sesuai spesifikasi Bina Marga.</p></div></div>
+    </div></div>
+    <div class="team-photo reveal" style="--d:.1s;background-image:url('img/team.jpg');background-size:cover;background-position:center">
+      <span class="tag">Jabodetabek</span>
+      
+      <div class="cap"><span class="eyebrow">Tim Lapangan</span><h3>Sigap, Rapi, Profesional.</h3></div>
+    </div>
+  </div></section>
+  <div class="statband"><div class="grid">
+    <div class="cell reveal"><b>150+</b><span>Proyek Terselesaikan</span></div>
+    <div class="cell reveal" style="--d:.08s"><b>12</b><span>Tahun Pengalaman</span></div>
+    <div class="cell reveal" style="--d:.16s"><b>25K m²</b><span>Total Area Diaspal</span></div>
+    <div class="cell reveal" style="--d:.24s"><b>100%</b><span>Garansi Pengerjaan</span></div>
+  </div></div>
+  <div class="cta-band"><div class="wrap"><h2>Percayakan proyek Anda pada kami.</h2><p>Survey lokasi gratis, penawaran transparan, hasil bergaransi.</p><div class="btns"><a class="btn btn-primary" data-page="penawaran">Minta Survey</a><a class="btn btn-ghost" data-page="layanan">Lihat Layanan</a></div></div></div>
+</div>
+
+<!-- TESTIMONI -->
+<div class="page" id="page-testimoni">
+  <section class="phead"><div class="wrap reveal">
+    <div class="crumb">Beranda <b>/</b> Testimoni</div>
+    <h1>Kata Klien Kami</h1>
+    <p>Klien kami dari developer perumahan, manajemen kawasan industri, hingga pemilik gudang pribadi.</p>
+  </div></section>
+  <section class="block"><div class="wrap">
+    <div class="ratingbox reveal">
+      <div class="big">4.9</div>
+      <div class="meta"><div class="stars" style="font-size:18px">★★★★★</div>Rata-rata rating dari <b style="color:var(--text)">150+ proyek</b> terselesaikan di Jabodetabek.</div>
+    </div>
+    <div class="testi">
+      <div class="tcard reveal"><div class="q">“</div><span class="stars">★★★★★</span><p>Pengerjaan akses gudang kami selesai 3 hari sesuai jadwal. Hasilnya rapi, marka parkir juga sekalian dikerjakan. Recommended buat proyek industri.</p><div class="who"><div class="ava">HW</div><div><b>Hendra W.</b><span>Manajer Operasional · Gudang Cikarang</span></div></div></div>
+      <div class="tcard reveal" style="--d:.08s"><div class="q">“</div><span class="stars">★★★★★</span><p>Komplek perumahan kami yang dulunya berlubang sekarang mulus lagi. Tim kerjanya sopan, koordinasi dengan warga juga baik. Harga sesuai RAB awal.</p><div class="who"><div class="ava">RT</div><div><b>Ibu Ratna</b><span>Ketua RW · Perumahan Depok</span></div></div></div>
+      <div class="tcard reveal" style="--d:.16s"><div class="q">“</div><span class="stars">★★★★★</span><p>Kami pakai jasa Dimas Aspal untuk 3 titik patching di kawasan. Cepat, bersih, dan hasilnya rata. Sekarang jadi langganan kami.</p><div class="who"><div class="ava">YS</div><div><b>Bp. Yusuf</b><span>Estate Management · Tangerang</span></div></div></div>
+    </div>
+  </div></section>
+  <div class="cta-band"><div class="wrap"><h2>Ingin jadi klien berikutnya?</h2><p>Bergabung dengan 150+ klien yang puas dengan hasil pengaspalan kami.</p><div class="btns"><a class="btn btn-primary" data-page="penawaran">Minta Penawaran</a><a class="btn btn-ghost" data-page="faq">Lihat FAQ</a></div></div></div>
+</div>
+
+<!-- FAQ -->
+<div class="page" id="page-faq">
+  <section class="phead"><div class="wrap reveal">
+    <div class="crumb">Beranda <b>/</b> FAQ</div>
+    <h1>Pertanyaan Umum</h1>
+    <p>Hal yang sering ditanyakan calon klien sebelum memulai proyek pengaspalan.</p>
+  </div></section>
+  <section class="block"><div class="wrap"><div class="faq reveal">
+    <div class="qa"><button>Berapa harga jasa pengaspalan per meter?<span class="ico">+</span></button><div class="ans"><p>Harga sangat tergantung jenis aspal (hotmix/coldmix), ketebalan lapisan, luas total, dan kondisi tanah eksisting. Setelah survey lokasi, kami berikan RAB rinci sehingga harga transparan.</p></div></div>
+    <div class="qa"><button>Apakah survey lokasi dikenakan biaya?<span class="ico">+</span></button><div class="ans"><p>Survey lokasi gratis untuk area Jabodetabek. Tim kami akan datang mengukur, foto kondisi lokasi, dan diskusi kebutuhan sebelum penawaran dibuat.</p></div></div>
+    <div class="qa"><button>Apa saja standar material yang digunakan?<span class="ico">+</span></button><div class="ans"><p>Kami menggunakan hotmix dari Asphalt Mixing Plant berstandar Bina Marga. Tipe lapisan menyesuaikan kebutuhan: AC-WC untuk lapis aus, AC-BC untuk lapis antara, atau AC-Base untuk lapis fondasi.</p></div></div>
+    <div class="qa"><button>Bisakah mengerjakan proyek skala kecil seperti komplek perumahan?<span class="ico">+</span></button><div class="ans"><p>Bisa. Kami menerima proyek mulai dari ratusan meter persegi (komplek, halaman gudang) hingga puluhan ribu meter persegi (jalan kawasan industri).</p></div></div>
+    <div class="qa"><button>Apakah ada garansi atas hasil pekerjaan?<span class="ico">+</span></button><div class="ans"><p>Ya, ada garansi pengerjaan tertulis yang akan dilampirkan pada kontrak kerja. Detail durasi &amp; cakupan garansi disesuaikan jenis pekerjaan.</p></div></div>
+    <div class="qa"><button>Pembayaran bisa via apa? Bisa terima invoice PT?<span class="ico">+</span></button><div class="ans"><p>Pembayaran via transfer bank. Kami juga bisa menerbitkan invoice/faktur pajak untuk klien perusahaan / proyek (PPN tersedia bila diperlukan).</p></div></div>
+  </div></div></section>
+  <div class="cta-band"><div class="wrap"><h2>Masih ada pertanyaan?</h2><p>Tanyakan langsung ke tim kami via WhatsApp di jam kerja.</p><div class="btns"><a class="btn btn-primary" data-page="penawaran">Tanya via WhatsApp</a><a class="btn btn-ghost" data-page="layanan">Lihat Layanan</a></div></div></div>
+</div>
+
+<!-- PENAWARAN -->
+<div class="page" id="page-penawaran">
+  <section class="phead"><div class="wrap reveal">
+    <div class="crumb">Beranda <b>/</b> Request Penawaran</div>
+    <h1>Minta Penawaran</h1>
+    <p>Isi form singkat — saat dikirim, detail proyek otomatis terkirim ke WhatsApp tim kami. Survey lokasi gratis untuk area Jabodetabek.</p>
+  </div></section>
+  <section class="block"><div class="wrap form-wrap">
+    <div class="form-info reveal">
+      <span class="eyebrow">Kenapa lewat form ini</span>
+      <h2 class="display" style="font-size:clamp(26px,3.6vw,36px);margin:14px 0 14px">Respon cepat, penawaran jelas.</h2>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Respon WhatsApp di jam kerja (08.00 – 17.00)</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Penawaran detail dikirim setelah survey</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Tidak ada biaya tersembunyi</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Bisa tagihan PT / proyek (PPN tersedia)</li>
+      </ul>
+      <a class="btn btn-primary" id="quickWa"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>Chat Cepat WhatsApp</a>
+      <div class="phone">Atau telepon: 0812-XXXX-XXXX</div>
+    </div>
+    <div class="formbox reveal" style="--d:.1s">
+      <div class="fgrid">
+        <div class="field"><label>Nama Lengkap</label><input id="f_nama" type="text" placeholder="Nama Anda"></div>
+        <div class="field"><label>No. WhatsApp / Telp</label><input id="f_wa" type="tel" placeholder="08xx xxxx xxxx"></div>
+        <div class="field"><label>Jenis Pekerjaan</label><select id="f_jenis"><option>Aspal Hotmix</option><option>Aspal Coldmix</option><option>Overlay / Pelapisan</option><option>Patching / Tambal Lubang</option><option>Marka Jalan</option><option>Paving &amp; Drainase</option><option>Konsultasi / Belum Yakin</option></select></div>
+        <div class="field"><label>Tipe Lokasi</label><select id="f_lokasi"><option>Perumahan / Komplek</option><option>Proyek Konstruksi</option><option>Kawasan Industri / Pabrik</option><option>Gudang / Area Parkir</option><option>Lainnya</option></select></div>
+        <div class="field"><label>Estimasi Luas (m²)</label><input id="f_luas" type="text" placeholder="Contoh: 1.500"></div>
+        <div class="field"><label>Lokasi (Kota / Wilayah)</label><input id="f_kota" type="text" placeholder="Contoh: Cikarang, Bekasi"></div>
+        <div class="field full"><label>Detail / Catatan</label><textarea id="f_detail" placeholder="Ceritakan kondisi lokasi, target waktu, dll."></textarea></div>
+      </div>
+      <button class="btn btn-primary" id="kirim"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>Kirim Penawaran via WhatsApp</button>
+      <div class="formnote">Form ini akan membuka WhatsApp dengan detail proyek terisi otomatis.</div>
+    </div>
+  </div></section>
+</div>
+
+</main>
+
+<div class="hazard"></div>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid2">
+      <div>
+        <div class="logo" data-page="home"><img src="img/logo-light.png" alt="Dimas Aspal"></div>
+        <p class="desc">Spesialis jasa pengaspalan hotmix, overlay, dan perbaikan jalan untuk perumahan, proyek konstruksi, dan kawasan industri di Jabodetabek.</p>
+        <a class="btn btn-primary" id="footWa"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>Chat WhatsApp</a>
+      </div>
+      <div><h5>Layanan</h5><ul><li><a data-page="layanan">Aspal Hotmix</a></li><li><a data-page="layanan">Aspal Coldmix</a></li><li><a data-page="layanan">Overlay / Pelapisan</a></li><li><a data-page="layanan">Patching / Tambal</a></li><li><a data-page="layanan">Marka Jalan</a></li><li><a data-page="layanan">Paving &amp; Drainase</a></li></ul></div>
+      <div><h5>Perusahaan</h5><ul><li><a data-page="mengapa">Mengapa Kami</a></li><li><a data-page="proses">Proses Kerja</a></li><li><a data-page="galeri">Galeri Proyek</a></li><li><a data-page="testimoni">Testimoni</a></li><li><a data-page="faq">FAQ</a></li></ul></div>
+      <div><h5>Kontak</h5><ul><li><a data-page="penawaran">WhatsApp: 0812-XXXX-XXXX</a></li><li><a>Telp: 021-XXXX-XXXX</a></li><li><a>Email: info@dimasaspal.id</a></li><li><a>Area: Jabodetabek</a></li><li><a>Jam Kerja: Sen–Sab 08.00–17.00</a></li></ul></div>
+    </div>
+    <div class="fbottom"><div>© <span id="yr"></span> Dimas Aspal. Semua hak dilindungi.</div><div>Layanan Pengaspalan Jabodetabek · Branding &amp; Trust</div></div>
+  </div>
+</footer>
+
+<script>
+  const WA_NUMBER = "62812XXXXXXXX"; // ganti dengan nomor WhatsApp asli (format 62..., tanpa +)
+  const TITLES = {home:'Dimas Aspal — Layanan Pengaspalan Profesional Jabodetabek',layanan:'Layanan — Dimas Aspal',proses:'Proses Kerja — Dimas Aspal',galeri:'Galeri Proyek — Dimas Aspal',mengapa:'Mengapa Kami — Dimas Aspal',testimoni:'Testimoni — Dimas Aspal',faq:'FAQ — Dimas Aspal',penawaran:'Minta Penawaran — Dimas Aspal'};
+  const PAGES = ['home','layanan','proses','galeri','mengapa','testimoni','faq','penawaran'];
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const header = document.getElementById('header');
+  addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10));
+  const menu = document.getElementById('mobileMenu');
+  document.getElementById('ham').addEventListener('click', () => menu.classList.toggle('show'));
+
+  function showPage(id, push){
+    if(!PAGES.includes(id)) id='home';
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const el = document.getElementById('page-'+id);
+    el.classList.add('active');
+    el.querySelectorAll('.reveal').forEach(r => { r.style.animation='none'; void r.offsetWidth; r.style.animation=''; });
+    document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => a.classList.toggle('active', a.getAttribute('data-page')===id));
+    document.title = TITLES[id] || TITLES.home;
+    menu.classList.remove('show');
+    window.scrollTo({top:0,behavior:'auto'});
+    if(push !== false) history.replaceState(null,'','#'+id);
+  }
+  document.addEventListener('click', (e) => {
+    const t = e.target.closest('[data-page]');
+    if(t){ e.preventDefault(); showPage(t.getAttribute('data-page')); }
+  });
+  document.querySelectorAll('.qa button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const qa = btn.parentElement, ans = qa.querySelector('.ans'), open = qa.classList.contains('open');
+      document.querySelectorAll('.qa').forEach(x => { x.classList.remove('open'); x.querySelector('.ans').style.maxHeight=null; });
+      if(!open){ qa.classList.add('open'); ans.style.maxHeight = ans.scrollHeight+'px'; }
+    });
+  });
+  function openWa(text){ window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(text),'_blank'); }
+  function buildMessage(){
+    const v = id => (document.getElementById(id).value || '-').trim();
+    return 'Halo Dimas Aspal, saya ingin minta penawaran:\n\n'
+      + 'Nama: '+v('f_nama')+'\n'+'WA/Telp: '+v('f_wa')+'\n'+'Jenis Pekerjaan: '+v('f_jenis')+'\n'
+      + 'Tipe Lokasi: '+v('f_lokasi')+'\n'+'Estimasi Luas: '+v('f_luas')+' m\u00B2\n'+'Lokasi: '+v('f_kota')+'\n'
+      + 'Detail: '+v('f_detail')+'\n\nMohon info lebih lanjut. Terima kasih.';
+  }
+  ['navWa','footWa'].forEach(id => document.getElementById(id).addEventListener('click', e=>{e.preventDefault(); showPage('penawaran');}));
+  document.getElementById('quickWa').addEventListener('click', e=>{e.preventDefault(); openWa('Halo Dimas Aspal, saya mau tanya jasa pengaspalan untuk area Jabodetabek.');});
+  document.getElementById('kirim').addEventListener('click', ()=>{
+    const nama = document.getElementById('f_nama');
+    if(!nama.value.trim()){ nama.focus(); nama.style.borderColor='#c0392b'; return; }
+    openWa(buildMessage());
+  });
+  addEventListener('hashchange', ()=>showPage(location.hash.replace('#',''), false));
+  showPage(location.hash.replace('#','') || 'home', false);
+</script>
+</body>
+</html>
